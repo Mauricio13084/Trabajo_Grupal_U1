@@ -1,0 +1,43 @@
+## .NET / C#
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+[Tt]emp/
+[Tt]mp/
+[Rr]elease/
+[Dd]ebug/
+x64/
+x86/
+[Aa][Rr][Mm]64/
+[Aa][Rr][Mm]/
+bld/
+[Bb]uild/
+[Bb]uild[Ll]ogs/
+[Pp][Aa][Cc][Kk][Aa][Gg][Ee][Ss]/
+*[Rr][Ee][Ss][Tt][Oo][Rr][Ee]/
+*.aps
+*.cache
+*.local
+_ReSharper*/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Visual Studio
+.vs/
+*.pidb
+*.svclog
+*.scc
+_scc/
+.gitattributes
+
+## Visual Studio Code
+.vscode/
+
+## Copias de seguridad y archivos temporales
+*~
+*.bak
+*.swp
+*.tmp
