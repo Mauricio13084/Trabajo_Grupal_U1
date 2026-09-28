@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\ClsContacto.cs" />
+    <Compile Include="Clases\Estudiante.cs" />
+    <Compile Include="Clases\Producto.cs" />
+    <Compile Include="Clases\ProductoMantenimiento.cs" />
     <Compile Include="Formularios\FrmEjercicio1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +121,12 @@
     </Compile>
     <Compile Include="Formularios\FrmEjercicio2.Designer.cs">
       <DependentUpon>FrmEjercicio2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmEjercicio20.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmEjercicio20.Designer.cs">
+      <DependentUpon>FrmEjercicio20.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmEjercicio3.cs">
       <SubType>Form</SubType>
@@ -207,6 +216,29 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmEjercicio4.resx">
       <DependentUpon>FrmEjercicio4.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\FrmEjercicio13.resx">
+      <DependentUpon>FrmEjercicio13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEjercicio14.resx">
+      <DependentUpon>FrmEjercicio14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEjercicio15.resx">
+      <DependentUpon>FrmEjercicio15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEjercicio16.resx">
+      <DependentUpon>FrmEjercicio16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEjercicio17.resx">
+      <DependentUpon>FrmEjercicio17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEjercicio18.resx">
+      <DependentUpon>FrmEjercicio18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEjercicio19.resx">
+      <DependentUpon>FrmEjercicio19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEjercicio20.resx">
+      <DependentUpon>FrmEjercicio20.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
