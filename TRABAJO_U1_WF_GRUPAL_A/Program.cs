@@ -17,7 +17,7 @@ namespace TRABAJO_U1_WF_GRUPAL_A
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmEjercicio19());
+            Application.Run(new FrmEjercicio20());
         }
     }
 }
