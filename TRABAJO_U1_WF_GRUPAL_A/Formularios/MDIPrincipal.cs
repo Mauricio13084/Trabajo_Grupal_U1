@@ -116,5 +116,10 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
             // Llamar al método para abrirlo en el MDI y registrar el acceso
             AbrirEjercicioHijo(frm1, "Ejercicio 01: Validación de Login");
         }
+
+        private void ejericio8ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

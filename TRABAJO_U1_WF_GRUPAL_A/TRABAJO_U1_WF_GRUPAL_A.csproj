@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Estudiante.cs" />
     <Compile Include="Formularios\FrmEjercicio1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +177,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\FrmEjercicio1.resx">
       <DependentUpon>FrmEjercicio1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEjercicio13.resx">
+      <DependentUpon>FrmEjercicio13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEjercicio14.resx">
+      <DependentUpon>FrmEjercicio14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEjercicio15.resx">
+      <DependentUpon>FrmEjercicio15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEjercicio16.resx">
+      <DependentUpon>FrmEjercicio16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEjercicio17.resx">
+      <DependentUpon>FrmEjercicio17.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
