@@ -116,28 +116,119 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
         {
             this.WindowState = FormWindowState.Maximized;
         }
+
         private void ejercicio1ConsumoDeAguaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmEjercicio1 frm1 = new FrmEjercicio1();
-            AbrirEjercicioHijo(frm1, "Ejercicio 01: Validación de Login");
+            FrmEjercicio2 frm = new FrmEjercicio2();
+            AbrirEjercicioHijo(frm, "Ejercicio 02");
         }
 
         private void ejercicio2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmEjercicio2 frm1 = new FrmEjercicio2();
-            AbrirEjercicioHijo(frm1, "Ejercicio 02: Calculadora");
+            FrmEjercicio3 frm = new FrmEjercicio3();
+            AbrirEjercicioHijo(frm, "Ejercicio 03");
         }
 
         private void ejercicio3ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmEjercicio3 frm1 = new FrmEjercicio3();
-            AbrirEjercicioHijo(frm1, "Ejercicio 04: Numero Secreto");
+            FrmEjercicio4 frm = new FrmEjercicio4();
+            AbrirEjercicioHijo(frm, "Ejercicio 04");
         }
 
         private void ejercicio4PiedraPapelOTijeraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmEjercicio4 frm1 = new FrmEjercicio4();
-            AbrirEjercicioHijo(frm1, "Ejercicio 05: Piedra, Papel Tijera");
+            FrmEjercicio5 frm = new FrmEjercicio5();
+            AbrirEjercicioHijo(frm, "Ejercicio 05");
+        }
+
+        private void ejercicio5CajeroAutomaticoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEjercicio6 frm = new FrmEjercicio6();
+            AbrirEjercicioHijo(frm, "Ejercicio 06");
+        }
+
+        private void ejercicio6ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEjercicio7 frm = new FrmEjercicio7();
+            AbrirEjercicioHijo(frm, "Ejercicio 07");
+        }
+
+        private void ejercicio7MatrizDeCalificacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEjercicio8 frm = new FrmEjercicio8();
+            AbrirEjercicioHijo(frm, "Ejercicio 08");
+        }
+
+        private void ejericio8ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEjercicio9 frm = new FrmEjercicio9();
+            AbrirEjercicioHijo(frm, "Ejercicio 09");
+        }
+
+        private void ejericio8ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmEjercicio10 frm = new FrmEjercicio10();
+            AbrirEjercicioHijo(frm, "Ejercicio 10");
+        }
+
+        private void ejericio8ToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            FrmEjercicio11 frm = new FrmEjercicio11();
+            AbrirEjercicioHijo(frm, "Ejercicio 11");
+        }
+
+        private void ejericio8ToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            FrmEjercicio12 frm = new FrmEjercicio12();
+            AbrirEjercicioHijo(frm, "Ejercicio 12");
+        }
+
+        private void ejericio8ToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            FrmEjercicio13 frm = new FrmEjercicio13();
+            AbrirEjercicioHijo(frm, "Ejercicio 13");
+        }
+
+        private void ejericio8ToolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            FrmEjercicio14 frm = new FrmEjercicio14();
+            AbrirEjercicioHijo(frm, "Ejercicio 14");
+        }
+
+        private void ejericio8ToolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            FrmEjercicio15 frm = new FrmEjercicio15();
+            AbrirEjercicioHijo(frm, "Ejercicio 15");
+        }
+
+        private void ejericio8ToolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+            FrmEjercicio16 frm = new FrmEjercicio16();
+            AbrirEjercicioHijo(frm, "Ejercicio 16");
+        }
+
+        private void ejercicio16CalculadoraDeTarifaDeTaxiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEjercicio17 frm = new FrmEjercicio17();
+            AbrirEjercicioHijo(frm, "Ejercicio 17");
+        }
+
+        private void ejercicio17ControlDeInventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEjercicio18 frm = new FrmEjercicio18();
+            AbrirEjercicioHijo(frm, "Ejercicio 18");
+        }
+
+        private void ejercicio18ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEjercicio19 frm = new FrmEjercicio19();
+            AbrirEjercicioHijo(frm, "Ejercicio 19");
+        }
+
+        private void ejercicio19JuegoAltoOSigoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEjercicio20 frm = new FrmEjercicio20();
+            AbrirEjercicioHijo(frm, "Ejercicio 20");
         }
     }
 }

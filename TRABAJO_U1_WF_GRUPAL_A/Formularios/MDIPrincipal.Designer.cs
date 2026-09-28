@@ -46,6 +46,10 @@
             this.ejericio8ToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.ejericio8ToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.ejericio8ToolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ejercicio16CalculadoraDeTarifaDeTaxiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ejercicio17ControlDeInventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ejercicio18ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ejercicio19JuegoAltoOSigoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
@@ -54,10 +58,6 @@
             this.colFecha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colEjercicio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ejercicio16CalculadoraDeTarifaDeTaxiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ejercicio17ControlDeInventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ejercicio18ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ejercicio19JuegoAltoOSigoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -97,118 +97,157 @@
             this.ejercicio18ToolStripMenuItem,
             this.ejercicio19JuegoAltoOSigoToolStripMenuItem});
             this.ejerciciosToolStripMenuItem.Name = "ejerciciosToolStripMenuItem";
-            this.ejerciciosToolStripMenuItem.Size = new System.Drawing.Size(27, 26);
-            this.ejerciciosToolStripMenuItem.Text = " ";
+            this.ejerciciosToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.ejerciciosToolStripMenuItem.Text = "Ejercicios";
             // 
             // ejercicio1ConsumoDeAguaToolStripMenuItem
             // 
             this.ejercicio1ConsumoDeAguaToolStripMenuItem.Name = "ejercicio1ConsumoDeAguaToolStripMenuItem";
-            this.ejercicio1ConsumoDeAguaToolStripMenuItem.Size = new System.Drawing.Size(370, 26);
-            this.ejercicio1ConsumoDeAguaToolStripMenuItem.Text = "Ejercicio 1: Consumo de Agua";
+            this.ejercicio1ConsumoDeAguaToolStripMenuItem.Size = new System.Drawing.Size(374, 22);
+            this.ejercicio1ConsumoDeAguaToolStripMenuItem.Text = "Ejercicio 2: Consumo de Agua";
             this.ejercicio1ConsumoDeAguaToolStripMenuItem.Click += new System.EventHandler(this.ejercicio1ConsumoDeAguaToolStripMenuItem_Click);
             // 
             // ejercicio2ToolStripMenuItem
             // 
             this.ejercicio2ToolStripMenuItem.Name = "ejercicio2ToolStripMenuItem";
-            this.ejercicio2ToolStripMenuItem.Size = new System.Drawing.Size(370, 26);
-            this.ejercicio2ToolStripMenuItem.Text = "Ejercicio 2: Tabla de Multiplicar";
+            this.ejercicio2ToolStripMenuItem.Size = new System.Drawing.Size(374, 22);
+            this.ejercicio2ToolStripMenuItem.Text = "Ejercicio 3: Tabla de Multiplicar";
             this.ejercicio2ToolStripMenuItem.Click += new System.EventHandler(this.ejercicio2ToolStripMenuItem_Click);
             // 
             // ejercicio3ToolStripMenuItem
             // 
             this.ejercicio3ToolStripMenuItem.Name = "ejercicio3ToolStripMenuItem";
-            this.ejercicio3ToolStripMenuItem.Size = new System.Drawing.Size(370, 26);
-            this.ejercicio3ToolStripMenuItem.Text = "Ejercicio 3: Juego Numero Secreto";
+            this.ejercicio3ToolStripMenuItem.Size = new System.Drawing.Size(374, 22);
+            this.ejercicio3ToolStripMenuItem.Text = "Ejercicio 4: Juego Numero Secreto";
             this.ejercicio3ToolStripMenuItem.Click += new System.EventHandler(this.ejercicio3ToolStripMenuItem_Click);
             // 
             // ejercicio4PiedraPapelOTijeraToolStripMenuItem
             // 
             this.ejercicio4PiedraPapelOTijeraToolStripMenuItem.Name = "ejercicio4PiedraPapelOTijeraToolStripMenuItem";
-            this.ejercicio4PiedraPapelOTijeraToolStripMenuItem.Size = new System.Drawing.Size(370, 26);
-            this.ejercicio4PiedraPapelOTijeraToolStripMenuItem.Text = "Ejercicio 4: Piedra, Papel o Tijera";
+            this.ejercicio4PiedraPapelOTijeraToolStripMenuItem.Size = new System.Drawing.Size(374, 22);
+            this.ejercicio4PiedraPapelOTijeraToolStripMenuItem.Text = "Ejercicio 5: Piedra, Papel o Tijera";
+            this.ejercicio4PiedraPapelOTijeraToolStripMenuItem.Click += new System.EventHandler(this.ejercicio4PiedraPapelOTijeraToolStripMenuItem_Click);
             // 
             // ejercicio5CajeroAutomaticoToolStripMenuItem
             // 
             this.ejercicio5CajeroAutomaticoToolStripMenuItem.Name = "ejercicio5CajeroAutomaticoToolStripMenuItem";
-            this.ejercicio5CajeroAutomaticoToolStripMenuItem.Size = new System.Drawing.Size(370, 26);
-            this.ejercicio5CajeroAutomaticoToolStripMenuItem.Text = "Ejercicio 5: Cajero Automatico";
+            this.ejercicio5CajeroAutomaticoToolStripMenuItem.Size = new System.Drawing.Size(374, 22);
+            this.ejercicio5CajeroAutomaticoToolStripMenuItem.Text = "Ejercicio 6: Cajero Automatico";
+            this.ejercicio5CajeroAutomaticoToolStripMenuItem.Click += new System.EventHandler(this.ejercicio5CajeroAutomaticoToolStripMenuItem_Click);
             // 
             // ejercicio6ToolStripMenuItem
             // 
             this.ejercicio6ToolStripMenuItem.Name = "ejercicio6ToolStripMenuItem";
-            this.ejercicio6ToolStripMenuItem.Size = new System.Drawing.Size(370, 26);
-            this.ejercicio6ToolStripMenuItem.Text = "Ejercicio 6: Agenda de Contactos";
+            this.ejercicio6ToolStripMenuItem.Size = new System.Drawing.Size(374, 22);
+            this.ejercicio6ToolStripMenuItem.Text = "Ejercicio 7: Agenda de Contactos";
+            this.ejercicio6ToolStripMenuItem.Click += new System.EventHandler(this.ejercicio6ToolStripMenuItem_Click);
             // 
             // ejercicio7MatrizDeCalificacionesToolStripMenuItem
             // 
             this.ejercicio7MatrizDeCalificacionesToolStripMenuItem.Name = "ejercicio7MatrizDeCalificacionesToolStripMenuItem";
-            this.ejercicio7MatrizDeCalificacionesToolStripMenuItem.Size = new System.Drawing.Size(370, 26);
-            this.ejercicio7MatrizDeCalificacionesToolStripMenuItem.Text = "Ejercicio 7: Matriz de Calificaciones";
+            this.ejercicio7MatrizDeCalificacionesToolStripMenuItem.Size = new System.Drawing.Size(374, 22);
+            this.ejercicio7MatrizDeCalificacionesToolStripMenuItem.Text = "Ejercicio 8: Matriz de Calificaciones";
+            this.ejercicio7MatrizDeCalificacionesToolStripMenuItem.Click += new System.EventHandler(this.ejercicio7MatrizDeCalificacionesToolStripMenuItem_Click);
             // 
             // ejericio8ToolStripMenuItem
             // 
             this.ejericio8ToolStripMenuItem.Name = "ejericio8ToolStripMenuItem";
-            this.ejericio8ToolStripMenuItem.Size = new System.Drawing.Size(370, 26);
-            this.ejericio8ToolStripMenuItem.Text = "Ejericio 8: Calificacion final de estudiantes";
+            this.ejericio8ToolStripMenuItem.Size = new System.Drawing.Size(374, 22);
+            this.ejericio8ToolStripMenuItem.Text = "Ejercicio 9: Calificacion final de estudiantes";
+            this.ejericio8ToolStripMenuItem.Click += new System.EventHandler(this.ejericio8ToolStripMenuItem_Click);
             // 
             // ejericio8ToolStripMenuItem1
             // 
             this.ejericio8ToolStripMenuItem1.Name = "ejericio8ToolStripMenuItem1";
-            this.ejericio8ToolStripMenuItem1.Size = new System.Drawing.Size(474, 26);
-            this.ejericio8ToolStripMenuItem1.Text = "Ejericio 9: Evaluación de especialistas";
+            this.ejericio8ToolStripMenuItem1.Size = new System.Drawing.Size(374, 22);
+            this.ejericio8ToolStripMenuItem1.Text = "Ejericio 10: Evaluación de especialistas";
             this.ejericio8ToolStripMenuItem1.Click += new System.EventHandler(this.ejericio8ToolStripMenuItem1_Click);
             // 
             // ejericio8ToolStripMenuItem2
             // 
             this.ejericio8ToolStripMenuItem2.Name = "ejericio8ToolStripMenuItem2";
-            this.ejericio8ToolStripMenuItem2.Size = new System.Drawing.Size(474, 26);
-            this.ejericio8ToolStripMenuItem2.Text = "Ejericio 10: Análisis de Palabras";
+            this.ejericio8ToolStripMenuItem2.Size = new System.Drawing.Size(374, 22);
+            this.ejericio8ToolStripMenuItem2.Text = "Ejercicio 11: Análisis de Palabras";
+            this.ejericio8ToolStripMenuItem2.Click += new System.EventHandler(this.ejericio8ToolStripMenuItem2_Click);
             // 
             // ejericio8ToolStripMenuItem3
             // 
             this.ejericio8ToolStripMenuItem3.Name = "ejericio8ToolStripMenuItem3";
-            this.ejericio8ToolStripMenuItem3.Size = new System.Drawing.Size(474, 26);
-            this.ejericio8ToolStripMenuItem3.Text = "Ejericio 11: FrizzBuzz";
+            this.ejericio8ToolStripMenuItem3.Size = new System.Drawing.Size(374, 22);
+            this.ejericio8ToolStripMenuItem3.Text = "Ejercicio 12: FrizzBuzz";
+            this.ejericio8ToolStripMenuItem3.Click += new System.EventHandler(this.ejericio8ToolStripMenuItem3_Click);
             // 
             // ejericio8ToolStripMenuItem4
             // 
             this.ejericio8ToolStripMenuItem4.Name = "ejericio8ToolStripMenuItem4";
-            this.ejericio8ToolStripMenuItem4.Size = new System.Drawing.Size(474, 26);
-            this.ejericio8ToolStripMenuItem4.Text = "Ejericio 12: Clasificación de Empleados";
+            this.ejericio8ToolStripMenuItem4.Size = new System.Drawing.Size(374, 22);
+            this.ejericio8ToolStripMenuItem4.Text = "Ejercicio 13: Clasificación de Empleados";
+            this.ejericio8ToolStripMenuItem4.Click += new System.EventHandler(this.ejericio8ToolStripMenuItem4_Click);
             // 
             // ejericio8ToolStripMenuItem5
             // 
             this.ejericio8ToolStripMenuItem5.Name = "ejericio8ToolStripMenuItem5";
-            this.ejericio8ToolStripMenuItem5.Size = new System.Drawing.Size(474, 26);
-            this.ejericio8ToolStripMenuItem5.Text = "Ejericio 13: Decodificación de información del empleado ";
+            this.ejericio8ToolStripMenuItem5.Size = new System.Drawing.Size(374, 22);
+            this.ejericio8ToolStripMenuItem5.Text = "Ejericio 14: Decodificación de información del empleado ";
+            this.ejericio8ToolStripMenuItem5.Click += new System.EventHandler(this.ejericio8ToolStripMenuItem5_Click);
             // 
             // ejericio8ToolStripMenuItem6
             // 
             this.ejericio8ToolStripMenuItem6.Name = "ejericio8ToolStripMenuItem6";
-            this.ejericio8ToolStripMenuItem6.Size = new System.Drawing.Size(474, 26);
-            this.ejericio8ToolStripMenuItem6.Text = "Ejericio 14: Sistema de votación";
+            this.ejericio8ToolStripMenuItem6.Size = new System.Drawing.Size(374, 22);
+            this.ejericio8ToolStripMenuItem6.Text = "Ejericio 15: Sistema de votación";
+            this.ejericio8ToolStripMenuItem6.Click += new System.EventHandler(this.ejericio8ToolStripMenuItem6_Click);
             // 
             // ejericio8ToolStripMenuItem7
             // 
             this.ejericio8ToolStripMenuItem7.Name = "ejericio8ToolStripMenuItem7";
-            this.ejericio8ToolStripMenuItem7.Size = new System.Drawing.Size(474, 26);
-            this.ejericio8ToolStripMenuItem7.Text = "Ejericio 15: Registro de matrícula";
+            this.ejericio8ToolStripMenuItem7.Size = new System.Drawing.Size(374, 22);
+            this.ejericio8ToolStripMenuItem7.Text = "Ejericio 16: Registro de matrícula";
+            this.ejericio8ToolStripMenuItem7.Click += new System.EventHandler(this.ejericio8ToolStripMenuItem7_Click);
+            // 
+            // ejercicio16CalculadoraDeTarifaDeTaxiToolStripMenuItem
+            // 
+            this.ejercicio16CalculadoraDeTarifaDeTaxiToolStripMenuItem.Name = "ejercicio16CalculadoraDeTarifaDeTaxiToolStripMenuItem";
+            this.ejercicio16CalculadoraDeTarifaDeTaxiToolStripMenuItem.Size = new System.Drawing.Size(374, 22);
+            this.ejercicio16CalculadoraDeTarifaDeTaxiToolStripMenuItem.Text = "Ejercicio 17: Calculadora de Tarifa de Taxi";
+            this.ejercicio16CalculadoraDeTarifaDeTaxiToolStripMenuItem.Click += new System.EventHandler(this.ejercicio16CalculadoraDeTarifaDeTaxiToolStripMenuItem_Click);
+            // 
+            // ejercicio17ControlDeInventarioToolStripMenuItem
+            // 
+            this.ejercicio17ControlDeInventarioToolStripMenuItem.Name = "ejercicio17ControlDeInventarioToolStripMenuItem";
+            this.ejercicio17ControlDeInventarioToolStripMenuItem.Size = new System.Drawing.Size(374, 22);
+            this.ejercicio17ControlDeInventarioToolStripMenuItem.Text = "Ejercicio18: Control de inventario";
+            this.ejercicio17ControlDeInventarioToolStripMenuItem.Click += new System.EventHandler(this.ejercicio17ControlDeInventarioToolStripMenuItem_Click);
+            // 
+            // ejercicio18ToolStripMenuItem
+            // 
+            this.ejercicio18ToolStripMenuItem.Name = "ejercicio18ToolStripMenuItem";
+            this.ejercicio18ToolStripMenuItem.Size = new System.Drawing.Size(374, 22);
+            this.ejercicio18ToolStripMenuItem.Text = "Ejercicio 19: Mantenimiento de productos";
+            this.ejercicio18ToolStripMenuItem.Click += new System.EventHandler(this.ejercicio18ToolStripMenuItem_Click);
+            // 
+            // ejercicio19JuegoAltoOSigoToolStripMenuItem
+            // 
+            this.ejercicio19JuegoAltoOSigoToolStripMenuItem.Name = "ejercicio19JuegoAltoOSigoToolStripMenuItem";
+            this.ejercicio19JuegoAltoOSigoToolStripMenuItem.Size = new System.Drawing.Size(374, 22);
+            this.ejercicio19JuegoAltoOSigoToolStripMenuItem.Text = "Ejercicio 20: Juego \"Alto o Sigo\"";
+            this.ejercicio19JuegoAltoOSigoToolStripMenuItem.Click += new System.EventHandler(this.ejercicio19JuegoAltoOSigoToolStripMenuItem_Click);
             // 
             // statusStrip
             // 
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 616);
+            this.statusStrip.Location = new System.Drawing.Point(0, 733);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(1234, 26);
+            this.statusStrip.Size = new System.Drawing.Size(1433, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
             // toolStripStatusLabel
             // 
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(54, 20);
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
             // lstHistorial
@@ -244,6 +283,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.AutoSize = true;
             this.groupBox1.Controls.Add(this.lstHistorial);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -254,33 +295,9 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "HISTORIAL DE ACCESO";
             // 
-            // ejercicio16CalculadoraDeTarifaDeTaxiToolStripMenuItem
-            // 
-            this.ejercicio16CalculadoraDeTarifaDeTaxiToolStripMenuItem.Name = "ejercicio16CalculadoraDeTarifaDeTaxiToolStripMenuItem";
-            this.ejercicio16CalculadoraDeTarifaDeTaxiToolStripMenuItem.Size = new System.Drawing.Size(474, 26);
-            this.ejercicio16CalculadoraDeTarifaDeTaxiToolStripMenuItem.Text = "Ejercicio 16: Calculadora de Tarifa de Taxi";
-            // 
-            // ejercicio17ControlDeInventarioToolStripMenuItem
-            // 
-            this.ejercicio17ControlDeInventarioToolStripMenuItem.Name = "ejercicio17ControlDeInventarioToolStripMenuItem";
-            this.ejercicio17ControlDeInventarioToolStripMenuItem.Size = new System.Drawing.Size(474, 26);
-            this.ejercicio17ControlDeInventarioToolStripMenuItem.Text = "Ejercicio17: Control de inventario";
-            // 
-            // ejercicio18ToolStripMenuItem
-            // 
-            this.ejercicio18ToolStripMenuItem.Name = "ejercicio18ToolStripMenuItem";
-            this.ejercicio18ToolStripMenuItem.Size = new System.Drawing.Size(474, 26);
-            this.ejercicio18ToolStripMenuItem.Text = "Ejercicio 18: Mantenimiento de productos";
-            // 
-            // ejercicio19JuegoAltoOSigoToolStripMenuItem
-            // 
-            this.ejercicio19JuegoAltoOSigoToolStripMenuItem.Name = "ejercicio19JuegoAltoOSigoToolStripMenuItem";
-            this.ejercicio19JuegoAltoOSigoToolStripMenuItem.Size = new System.Drawing.Size(474, 26);
-            this.ejercicio19JuegoAltoOSigoToolStripMenuItem.Text = "Ejercicio 19: Juego \"Alto o Sigo\"";
-            // 
             // MDIPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1433, 755);
             this.Controls.Add(this.groupBox1);

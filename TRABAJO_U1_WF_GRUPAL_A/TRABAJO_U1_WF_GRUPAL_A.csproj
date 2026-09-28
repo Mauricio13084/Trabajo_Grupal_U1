@@ -50,11 +50,11 @@
     <Compile Include="Clases\Estudiante.cs" />
     <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\ProductoMantenimiento.cs" />
-    <Compile Include="Formularios\FrmEjercicio1.cs">
+    <Compile Include="Formularios\FrmEjercicio2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmEjercicio1.Designer.cs">
-      <DependentUpon>FrmEjercicio1.cs</DependentUpon>
+    <Compile Include="Formularios\FrmEjercicio2.Designer.cs">
+      <DependentUpon>FrmEjercicio2.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmEjercicio10.cs">
       <SubType>Form</SubType>
@@ -116,23 +116,17 @@
     <Compile Include="Formularios\FrmEjercicio19.Designer.cs">
       <DependentUpon>FrmEjercicio19.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmEjercicio2.cs">
+    <Compile Include="Formularios\FrmEjercicio3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmEjercicio2.Designer.cs">
-      <DependentUpon>FrmEjercicio2.cs</DependentUpon>
+    <Compile Include="Formularios\FrmEjercicio3.Designer.cs">
+      <DependentUpon>FrmEjercicio3.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmEjercicio20.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\FrmEjercicio20.Designer.cs">
       <DependentUpon>FrmEjercicio20.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\FrmEjercicio3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\FrmEjercicio3.Designer.cs">
-      <DependentUpon>FrmEjercicio3.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmEjercicio4.cs">
       <SubType>Form</SubType>
@@ -184,8 +178,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formularios\FrmEjercicio1.resx">
-      <DependentUpon>FrmEjercicio1.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\FrmEjercicio2.resx">
+      <DependentUpon>FrmEjercicio2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmEjercicio10.resx">
       <DependentUpon>FrmEjercicio10.cs</DependentUpon>
@@ -208,14 +202,15 @@
     <EmbeddedResource Include="Formularios\FrmEjercicio9.resx">
       <DependentUpon>FrmEjercicio9.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmEjercicio2.resx">
-      <DependentUpon>FrmEjercicio2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmEjercicio3.resx">
       <DependentUpon>FrmEjercicio3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmEjercicio4.resx">
       <DependentUpon>FrmEjercicio4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEjercicio5.resx">
+      <DependentUpon>FrmEjercicio5.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmEjercicio13.resx">
       <DependentUpon>FrmEjercicio13.cs</DependentUpon>
     </EmbeddedResource>

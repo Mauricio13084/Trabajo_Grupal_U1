@@ -7,152 +7,98 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
 {
     public partial class FrmEjercicio4 : Form
     {
-        private int rondaActual = 1;
-        private const int maxRondas = 5;
-
-        private int victoriasJugador = 0;
-        private int victoriasComputadora = 0;
-        private int empates = 0;
+        private int numeroSecreto;
+        private int intentosRealizados = 0;
+        private const int maxIntentos = 10;
+        private int puntuacion = 100;
         public FrmEjercicio4()
         {
             InitializeComponent();
         }
 
-        private void FrmEjercicio4_Load(object sender, EventArgs e)
+        private void FrmEjercicio3_Load(object sender, EventArgs e)
         {
-            ReiniciarJuego();
+            IniciarNuevoJuego();
         }
-        private void ReiniciarJuego()
+        private void IniciarNuevoJuego()
         {
-            rondaActual = 1;
-            victoriasJugador = 0;
-            victoriasComputadora = 0;
-            empates = 0;
-
-            label5.Text = "0"; 
-            label7.Text = "0";
-            label9.Text = "0";
-            label11.Text = $"{rondaActual} / {maxRondas}";
-            label3.Text = "¡Selecciona tu jugada con los botones!"; 
-
-            picJugador.Image = null;
-            picComputadora.Image = null;
-
-            HabilitarBotones(true);
-        }
-        private void BotonJugada_Click(object sender, EventArgs e)
-        {
-            if (rondaActual > maxRondas) return;
-
-            Button btnSeleccionado = (Button)sender;
-            string jugadaUsuario = "";
-
-            if (btnSeleccionado.Name == "btnPiedra")
-            {
-                jugadaUsuario = "Piedra";
-                picJugador.Image = Properties.Resources.Rock;
-            }
-            else if (btnSeleccionado.Name == "btnPapel")
-            {
-                jugadaUsuario = "Papel";
-                picJugador.Image = Properties.Resources.Paper;
-            }
-            else if (btnSeleccionado.Name == "btnTijera")
-            {
-                jugadaUsuario = "Tijera";
-                picJugador.Image = Properties.Resources.Scissors;
-            }
-
-            string[] opciones = { "Piedra", "Papel", "Tijera" };
             Random rand = new Random();
-            int indiceComp = rand.Next(0, 3);
-            string jugadaComputadora = opciones[indiceComp];
+            numeroSecreto = rand.Next(1, 101);
+            intentosRealizados = 0;
+            puntuacion = 100;
 
-            if (jugadaComputadora == "Piedra") picComputadora.Image = Properties.Resources.Rock;
-            else if (jugadaComputadora == "Papel") picComputadora.Image = Properties.Resources.Paper;
-            else if (jugadaComputadora == "Tijera") picComputadora.Image = Properties.Resources.Scissors;
+            txtNumero.Clear();
+            txtNumero.Enabled = true;
+            btnIntentar.Enabled = true;
 
-            string resultadoRonda = "";
-
-            if (jugadaUsuario == jugadaComputadora)
-            {
-                empates++;
-                resultadoRonda = $"Empate";
-            }
-            else if (
-                (jugadaUsuario == "Piedra" && jugadaComputadora == "Tijera") ||
-                (jugadaUsuario == "Papel" && jugadaComputadora == "Piedra") ||
-                (jugadaUsuario == "Tijera" && jugadaComputadora == "Papel")
-            )
-            {
-                victoriasJugador++;
-                resultadoRonda = $"¡Ganaste la ronda!";
-            }
-            else
-            {
-                victoriasComputadora++;
-                resultadoRonda = $"La computadora gana la ronda";
-            }
-
-            label3.Text = resultadoRonda;
-
-            label5.Text = victoriasJugador.ToString();
-            label7.Text = victoriasComputadora.ToString();
-            label9.Text = empates.ToString();
-
-            if (rondaActual < maxRondas)
-            {
-                rondaActual++;
-                label11.Text = $"{rondaActual} / {maxRondas}";
-            }
-            else
-            {
-                DeterminarGanadorFinal();
-            }
-        }
-        private void DeterminarGanadorFinal()
-        {
-            string ganadorFinal = "";
-
-            if (victoriasJugador > victoriasComputadora)
-            {
-                ganadorFinal = "¡Felicidades, ganaste el juego!";
-            }
-            else if (victoriasComputadora > victoriasJugador)
-            {
-                ganadorFinal = "La computadora ganó el juego.";
-            }
-            else
-            {
-                ganadorFinal = "El juego terminó en empate general.";
-            }
-
-            MessageBox.Show($"FIN DEL JUEGO\n\n" +
-                            $"Victorias del Usuario: {victoriasJugador}\n" +
-                            $"Victorias de la Computadora: {victoriasComputadora}\n" +
-                            $"Empates: {empates}\n\n" +
-                            $"{ganadorFinal}",
-                            "Resultado Final", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            label3.Text = ganadorFinal;
-            HabilitarBotones(false);
+            progressBar1.Minimum = 0;
+            progressBar1.Maximum = maxIntentos;
+            progressBar1.Value = 0;
         }
 
-        private void HabilitarBotones(bool estado)
+        private void btnIntentar_Click(object sender, EventArgs e)
         {
-            btnPiedra.Enabled = estado;
-            btnPapel.Enabled = estado;
-            btnTijera.Enabled = estado;
+            if (!int.TryParse(txtNumero.Text, out int numeroIngresado) || numeroIngresado < 1 || numeroIngresado > 100)
+            {
+                MessageBox.Show("Por favor, ingresa un numero valido entre 1 y 100.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNumero.Focus();
+                return;
+            }
+
+            intentosRealizados++;
+            progressBar1.Value = intentosRealizados;
+            label8.Text = $"{intentosRealizados:00} / {maxIntentos}";
+            label5.Text = $"{intentosRealizados:00} / {maxIntentos}";
+
+            if (numeroIngresado == numeroSecreto)
+            {
+                label10.Text = "¡Correcto!";
+                MessageBox.Show($"¡Felicidades! Has adivinado el número secreto en {intentosRealizados} intento(s).", "¡Ganaste! :)", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FinalizarJuego(true);
+            }
+            else if (numeroIngresado < numeroSecreto)
+            {
+                label10.Text = "MAYOR";
+                ReducirPuntuacion();
+            }
+            else
+            {
+                label10.Text = "MENOR";
+                ReducirPuntuacion();
+            }
+
+            if (intentosRealizados >= maxIntentos && numeroIngresado != numeroSecreto)
+            {
+                MessageBox.Show($"¡Se te acabaron los intentos! El número secreto era: {numeroSecreto}", "Perdiste :(", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FinalizarJuego(false);
+            }
+
+            txtNumero.Clear();
+            txtNumero.Focus();
+        }
+        private void ReducirPuntuacion()
+        {
+            puntuacion -= 10;
+            if (puntuacion < 0) puntuacion = 0;
+            label9.Text = $"{puntuacion} pts";
+        }
+        private void FinalizarJuego(bool ganado)
+        {
+            txtNumero.Enabled = false;
+            btnIntentar.Enabled = false;
+            label11.Text = numeroSecreto.ToString();
+            label12.Text = $"{puntuacion} puntos";
         }
 
         private void btnNuevoJuego_Click(object sender, EventArgs e)
         {
-            ReiniciarJuego();
+            IniciarNuevoJuego();
         }
-    }   
+    }
 }

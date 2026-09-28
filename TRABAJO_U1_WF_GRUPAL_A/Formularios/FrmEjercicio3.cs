@@ -7,98 +7,118 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
 {
     public partial class FrmEjercicio3 : Form
     {
-        private int numeroSecreto;
-        private int intentosRealizados = 0;
-        private const int maxIntentos = 10;
-        private int puntuacion = 100;
         public FrmEjercicio3()
         {
             InitializeComponent();
         }
 
-        private void FrmEjercicio3_Load(object sender, EventArgs e)
+        private void FrmEjercicio2_Load(object sender, EventArgs e)
         {
-            IniciarNuevoJuego();
-        }
-        private void IniciarNuevoJuego()
-        {
-            Random rand = new Random();
-            numeroSecreto = rand.Next(1, 101);
-            intentosRealizados = 0;
-            puntuacion = 100;
-
-            txtNumero.Clear();
-            txtNumero.Enabled = true;
-            btnIntentar.Enabled = true;
-
-            progressBar1.Minimum = 0;
-            progressBar1.Maximum = maxIntentos;
-            progressBar1.Value = 0;
+            for (int i = 1; i <= 20; i++)
+            {
+                cmbGenerar.Items.Add(i);
+            }
+            cmbGenerar.SelectedIndex = 19;
         }
 
-        private void btnIntentar_Click(object sender, EventArgs e)
+        private void btnGenerar_Click(object sender, EventArgs e)
         {
-            if (!int.TryParse(txtNumero.Text, out int numeroIngresado) || numeroIngresado < 1 || numeroIngresado > 100)
+            try
             {
-                MessageBox.Show("Por favor, ingresa un numero valido entre 1 y 100.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtNumero.Focus();
-                return;
-            }
+                if (!int.TryParse(txtNumero.Text, out int numeroBase))
+                {
+                    MessageBox.Show("Por favor, ingrese un número entero válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtNumero.Focus();
+                    return;
+                }
+                if (cmbGenerar.SelectedItem == null)
+                {
+                    MessageBox.Show("Seleccione hasta qué número desea generar la tabla.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
-            intentosRealizados++;
-            progressBar1.Value = intentosRealizados;
-            label8.Text = $"{intentosRealizados:00} / {maxIntentos}";
-            label5.Text = $"{intentosRealizados:00} / {maxIntentos}";
+                int limite = Convert.ToInt32(cmbGenerar.SelectedItem);
 
-            if (numeroIngresado == numeroSecreto)
-            {
-                label10.Text = "¡Correcto!";
-                MessageBox.Show($"¡Felicidades! Has adivinado el número secreto en {intentosRealizados} intento(s).", "¡Ganaste! :)", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                FinalizarJuego(true);
-            }
-            else if (numeroIngresado < numeroSecreto)
-            {
-                label10.Text = "MAYOR";
-                ReducirPuntuacion();
-            }
-            else
-            {
-                label10.Text = "MENOR";
-                ReducirPuntuacion();
-            }
+                dataGridView1.Rows.Clear();
 
-            if (intentosRealizados >= maxIntentos && numeroIngresado != numeroSecreto)
-            {
-                MessageBox.Show($"¡Se te acabaron los intentos! El número secreto era: {numeroSecreto}", "Perdiste :(", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                FinalizarJuego(false);
-            }
+                int cantidadPares = 0;
+                int cantidadImpares = 0;
+                int sumaResultados = 0;
+                int mayorResultado = int.MinValue;
+                int contadorMultiplos3 = 0;
 
+                string paresList = "";
+                string imparesList = "";
+
+                for (int i = 1; i <= limite; i++)
+                {
+                    int resultado = numeroBase * i;
+                    string operacion = $"{numeroBase} x {i}";
+
+                    // Determinar si es par o impar
+                    string parImpar = (resultado % 2 == 0) ? "Par" : "Impar";
+                    if (resultado % 2 == 0)
+                    {
+                        cantidadPares++;
+                        paresList += resultado + ", ";
+                    }
+                    else
+                    {
+                        cantidadImpares++;
+                        imparesList += resultado + ", ";
+                    }
+
+                    // Determinar si es multiplo de 3
+                    string esMultiplo3 = (resultado % 3 == 0) ? "Si" : "No";
+                    if (resultado % 3 == 0)
+                    {
+                        contadorMultiplos3++;
+                    }
+
+                    // Encontrar el resultado mayor
+                    if (resultado > mayorResultado)
+                    {
+                        mayorResultado = resultado;
+                    }
+
+                    // Sumar al total
+                    sumaResultados += resultado;
+
+                    // Agregar fila al DataGridView
+                    dataGridView1.Rows.Add(operacion, resultado, parImpar, esMultiplo3);
+                }
+
+                label4.Text = $"{cantidadPares}";
+                label6.Text = $"{cantidadImpares}";
+                label8.Text = sumaResultados.ToString();
+                label10.Text = mayorResultado.ToString();
+                label12.Text = $"{contadorMultiplos3} resultados";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al procesar la tabla: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
             txtNumero.Clear();
+            dataGridView1.Rows.Clear();
+            if (cmbGenerar.Items.Count > 0)
+                cmbGenerar.SelectedIndex = 19;
+
+            label4.Text = "label4";
+            label6.Text = "label6";
+            label8.Text = "label8";
+            label10.Text = "label10";
+            label12.Text = "label12";
+
             txtNumero.Focus();
-        }
-        private void ReducirPuntuacion()
-        {
-            puntuacion -= 10;
-            if (puntuacion < 0) puntuacion = 0;
-            label9.Text = $"{puntuacion} pts";
-        }
-        private void FinalizarJuego(bool ganado)
-        {
-            txtNumero.Enabled = false;
-            btnIntentar.Enabled = false;
-            label11.Text = numeroSecreto.ToString();
-            label12.Text = $"{puntuacion} puntos";
-        }
-
-        private void btnNuevoJuego_Click(object sender, EventArgs e)
-        {
-            IniciarNuevoJuego();
         }
     }
 }
