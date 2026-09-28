@@ -199,6 +199,15 @@
     <EmbeddedResource Include="Formularios\FrmEjercicio9.resx">
       <DependentUpon>FrmEjercicio9.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEjercicio2.resx">
+      <DependentUpon>FrmEjercicio2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEjercicio3.resx">
+      <DependentUpon>FrmEjercicio3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEjercicio4.resx">
+      <DependentUpon>FrmEjercicio4.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,6 +222,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -226,6 +236,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scissors.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -95,26 +95,49 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
         }
         private void AbrirEjercicioHijo(Form formHijo, string nombreEjercicio)
         {
+            foreach (Form hijoAbierto in this.MdiChildren)
+            {
+                hijoAbierto.Close();
+            }
+
             formHijo.MdiParent = this;
             formHijo.Show();
 
             string horaActual = DateTime.Now.ToString("HH:mm:ss");
             string fechaActual = DateTime.Now.ToShortDateString();
 
-            ListViewItem fila = new ListViewItem(horaActual); 
+            ListViewItem fila = new ListViewItem(horaActual);
             fila.SubItems.Add(fechaActual);
             fila.SubItems.Add(nombreEjercicio);
 
             lstHistorial.Items.Add(fila);
         }
-
+        private void MDIPrincipal_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
         private void ejercicio1ConsumoDeAguaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Instanciar el formulario del Ejercicio 1 de manera independiente
             FrmEjercicio1 frm1 = new FrmEjercicio1();
-
-            // Llamar al método para abrirlo en el MDI y registrar el acceso
             AbrirEjercicioHijo(frm1, "Ejercicio 01: Validación de Login");
+        }
+
+        private void ejercicio2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEjercicio2 frm1 = new FrmEjercicio2();
+            AbrirEjercicioHijo(frm1, "Ejercicio 02: Calculadora");
+        }
+
+        private void ejercicio3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEjercicio3 frm1 = new FrmEjercicio3();
+            AbrirEjercicioHijo(frm1, "Ejercicio 04: Numero Secreto");
+        }
+
+        private void ejercicio4PiedraPapelOTijeraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEjercicio4 frm1 = new FrmEjercicio4();
+            AbrirEjercicioHijo(frm1, "Ejercicio 05: Piedra, Papel Tijera");
         }
     }
 }

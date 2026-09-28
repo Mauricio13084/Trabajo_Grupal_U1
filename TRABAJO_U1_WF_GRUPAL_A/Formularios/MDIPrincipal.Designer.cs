@@ -34,12 +34,6 @@
             this.ejercicio1ConsumoDeAguaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ejercicio2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ejercicio3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.lstHistorial = new System.Windows.Forms.ListView();
-            this.colHora = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ejercicio4PiedraPapelOTijeraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ejercicio5CajeroAutomaticoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ejercicio6ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,8 +46,14 @@
             this.ejericio8ToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.ejericio8ToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.ejericio8ToolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.lstHistorial = new System.Windows.Forms.ListView();
+            this.colHora = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colFecha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colEjercicio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -65,7 +65,7 @@
             this.ejerciciosToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1234, 24);
+            this.menuStrip.Size = new System.Drawing.Size(1433, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -103,67 +103,21 @@
             this.ejercicio2ToolStripMenuItem.Name = "ejercicio2ToolStripMenuItem";
             this.ejercicio2ToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
             this.ejercicio2ToolStripMenuItem.Text = "Ejercicio 2: Tabla de Multiplicar";
+            this.ejercicio2ToolStripMenuItem.Click += new System.EventHandler(this.ejercicio2ToolStripMenuItem_Click);
             // 
             // ejercicio3ToolStripMenuItem
             // 
             this.ejercicio3ToolStripMenuItem.Name = "ejercicio3ToolStripMenuItem";
             this.ejercicio3ToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
             this.ejercicio3ToolStripMenuItem.Text = "Ejercicio 3: Juego Numero Secreto";
-            // 
-            // statusStrip
-            // 
-            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 620);
-            this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(1234, 22);
-            this.statusStrip.TabIndex = 2;
-            this.statusStrip.Text = "StatusStrip";
-            // 
-            // toolStripStatusLabel
-            // 
-            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
-            this.toolStripStatusLabel.Text = "Estado";
-            // 
-            // lstHistorial
-            // 
-            this.lstHistorial.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.colHora,
-            this.colFecha,
-            this.colEjercicio});
-            this.lstHistorial.FullRowSelect = true;
-            this.lstHistorial.GridLines = true;
-            this.lstHistorial.HideSelection = false;
-            this.lstHistorial.Location = new System.Drawing.Point(16, 32);
-            this.lstHistorial.Name = "lstHistorial";
-            this.lstHistorial.Size = new System.Drawing.Size(427, 510);
-            this.lstHistorial.TabIndex = 4;
-            this.lstHistorial.UseCompatibleStateImageBehavior = false;
-            this.lstHistorial.View = System.Windows.Forms.View.Details;
-            // 
-            // colHora
-            // 
-            this.colHora.Text = "Hora";
-            this.colHora.Width = 90;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.AutoSize = true;
-            this.groupBox1.Controls.Add(this.lstHistorial);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(760, 36);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(462, 574);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "HISTORIAL DE ACCESO";
+            this.ejercicio3ToolStripMenuItem.Click += new System.EventHandler(this.ejercicio3ToolStripMenuItem_Click);
             // 
             // ejercicio4PiedraPapelOTijeraToolStripMenuItem
             // 
             this.ejercicio4PiedraPapelOTijeraToolStripMenuItem.Name = "ejercicio4PiedraPapelOTijeraToolStripMenuItem";
             this.ejercicio4PiedraPapelOTijeraToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
             this.ejercicio4PiedraPapelOTijeraToolStripMenuItem.Text = "Ejercicio 4: Piedra, Papel o Tijera";
+            this.ejercicio4PiedraPapelOTijeraToolStripMenuItem.Click += new System.EventHandler(this.ejercicio4PiedraPapelOTijeraToolStripMenuItem_Click);
             // 
             // ejercicio5CajeroAutomaticoToolStripMenuItem
             // 
@@ -231,21 +185,72 @@
             this.ejericio8ToolStripMenuItem7.Size = new System.Drawing.Size(258, 22);
             this.ejericio8ToolStripMenuItem7.Text = "Ejericio 8:";
             // 
+            // statusStrip
+            // 
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel});
+            this.statusStrip.Location = new System.Drawing.Point(0, 733);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Size = new System.Drawing.Size(1433, 22);
+            this.statusStrip.TabIndex = 2;
+            this.statusStrip.Text = "StatusStrip";
+            // 
+            // toolStripStatusLabel
+            // 
+            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
+            this.toolStripStatusLabel.Text = "Estado";
+            // 
+            // lstHistorial
+            // 
+            this.lstHistorial.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colHora,
+            this.colFecha,
+            this.colEjercicio});
+            this.lstHistorial.FullRowSelect = true;
+            this.lstHistorial.GridLines = true;
+            this.lstHistorial.HideSelection = false;
+            this.lstHistorial.Location = new System.Drawing.Point(16, 32);
+            this.lstHistorial.Name = "lstHistorial";
+            this.lstHistorial.Size = new System.Drawing.Size(427, 510);
+            this.lstHistorial.TabIndex = 4;
+            this.lstHistorial.UseCompatibleStateImageBehavior = false;
+            this.lstHistorial.View = System.Windows.Forms.View.Details;
+            // 
+            // colHora
+            // 
+            this.colHora.Text = "Hora";
+            this.colHora.Width = 90;
+            // 
             // colFecha
             // 
             this.colFecha.Text = "Fecha";
-            this.colFecha.Width = 90;
+            this.colFecha.Width = 150;
             // 
             // colEjercicio
             // 
             this.colEjercicio.Text = "Ejercicio";
             this.colEjercicio.Width = 220;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.AutoSize = true;
+            this.groupBox1.Controls.Add(this.lstHistorial);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(971, 27);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(462, 574);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "HISTORIAL DE ACCESO";
+            // 
             // MDIPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1234, 642);
+            this.ClientSize = new System.Drawing.Size(1433, 755);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
@@ -254,6 +259,7 @@
             this.MainMenuStrip = this.menuStrip;
             this.Name = "MDIPrincipal";
             this.Text = "MDIPrincipal";
+            this.Load += new System.EventHandler(this.MDIPrincipal_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
