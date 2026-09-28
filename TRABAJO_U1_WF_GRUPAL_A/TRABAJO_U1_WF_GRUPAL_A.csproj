@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Clases\Estudiante.cs" />
     <Compile Include="Clases\Producto.cs" />
+    <Compile Include="Clases\ProductoMantenimiento.cs" />
     <Compile Include="Formularios\FrmEjercicio1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmEjercicio18.resx">
       <DependentUpon>FrmEjercicio18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEjercicio19.resx">
+      <DependentUpon>FrmEjercicio19.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

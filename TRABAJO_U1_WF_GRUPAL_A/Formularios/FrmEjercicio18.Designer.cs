@@ -375,7 +375,7 @@
             this.btnCerrar.BackColor = System.Drawing.Color.SteelBlue;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCerrar.Location = new System.Drawing.Point(670, 211);
+            this.btnCerrar.Location = new System.Drawing.Point(706, 204);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(221, 41);
             this.btnCerrar.TabIndex = 40;
@@ -388,7 +388,7 @@
             this.btnLimpiar.BackColor = System.Drawing.Color.SteelBlue;
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLimpiar.Location = new System.Drawing.Point(670, 155);
+            this.btnLimpiar.Location = new System.Drawing.Point(706, 148);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(221, 41);
             this.btnLimpiar.TabIndex = 39;
@@ -401,7 +401,7 @@
             this.btnRegistrar.BackColor = System.Drawing.Color.SteelBlue;
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnRegistrar.Location = new System.Drawing.Point(670, 97);
+            this.btnRegistrar.Location = new System.Drawing.Point(706, 90);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(221, 41);
             this.btnRegistrar.TabIndex = 38;
