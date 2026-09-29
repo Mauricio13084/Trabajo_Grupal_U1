@@ -13,7 +13,6 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
 {
     public partial class FrmEjercicio19 : Form
     {
-        // Lista donde se guardan los productos
         private List<ProductoMantenimiento> productos = new List<ProductoMantenimiento>();
 
         private int numeroModificando = 0;
@@ -56,8 +55,6 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
             rbActivo.Checked = true;
 
             BloquearCampos(false);
-
-            // Mostrar el primer número
             txtNumero.Text = ObtenerSiguienteNumero().ToString();
         }
 
@@ -207,8 +204,6 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
                     "Sin selección", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            // Validar campos
             if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
                 !double.TryParse(txtPrecio.Text, out double precio) ||
                 nudCantidad.Value <= 0)
@@ -217,8 +212,6 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            // Buscar y actualizar
             for (int i = 0; i < productos.Count; i++)
             {
                 if (productos[i].Numero == numeroModificando)

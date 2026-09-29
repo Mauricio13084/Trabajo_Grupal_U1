@@ -19,8 +19,6 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
         private int partidasGanadas = 0;
         private int partidasPerdidas = 0;
         private int partidasJugadas = 0;
-
-        // Generador de números aleatorios
         private Random random = new Random();
         public FrmEjercicio20()
         {
@@ -41,13 +39,9 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
             txtPerdidas.Text = "0";
             txtJugadas.Text = "0";
             txtResultado.Text = "Presione 'Pedir Carta' para comenzar";
-
-            // Habilitar/deshabilitar botones
             btnPedir.Enabled = true;
             btnPlantarse.Enabled = true;
             btnNuevaRonda.Enabled = false;
-
-            // Limpiar el ListBox
             lstResumen.Items.Clear();
 
             rondaTerminada = false;
@@ -57,10 +51,7 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
         {
             if (rondaTerminada) return;
 
-            // Generar una carta aleatoria entre 1 y 11
             int carta = random.Next(1, 12);
-
-            // Sumar al puntaje
             puntaje += carta;
             cartasPedidas++;
 
@@ -97,8 +88,6 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
         private void btnPlantarse_Click(object sender, EventArgs e)
         {
             if (rondaTerminada) return;
-
-            // El jugador se planta
             if (puntaje >= 16)
             {
                 txtResultado.Text = $"¡Ganaste! Te plantaste con {puntaje}";
@@ -117,8 +106,6 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
             private void TerminarRonda(bool gano)
         {
             rondaTerminada = true;
-
-            // Acumular resultado
             if (gano)
                 partidasGanadas++;
             else
@@ -126,7 +113,6 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
 
             partidasJugadas++;
 
-            // Actualizar contadores
             txtGanadas.Text = partidasGanadas.ToString();
             txtPerdidas.Text = partidasPerdidas.ToString();
             txtJugadas.Text = partidasJugadas.ToString();
@@ -135,27 +121,20 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
             btnPlantarse.Enabled = false;
             btnNuevaRonda.Enabled = true;
 
-            // Agregar línea separadora al ListBox
             lstResumen.Items.Add("────────────────────");
         }
 
         private void btnNuevaRonda_Click(object sender, EventArgs e)
         {
-            // Reiniciar variables de la ronda
             puntaje = 0;
             cartasPedidas = 0;
             rondaTerminada = false;
-
-            // Actualizar pantalla
             txtPuntaje.Text = "0";
             txtCarta.Text = "—";
             txtCartasPedidas.Text = "0";
             txtResultado.Text = "Presione 'Pedir Carta' para comenzar";
 
-            // Volver el color del ListBox a negro
             lstResumen.ForeColor = Color.Black;
-
-            // Habilitar/deshabilitar botones
             btnPedir.Enabled = true;
             btnPlantarse.Enabled = true;
             btnNuevaRonda.Enabled = false;

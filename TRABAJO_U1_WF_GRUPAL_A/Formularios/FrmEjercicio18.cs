@@ -14,7 +14,7 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
 {
     public partial class FrmEjercicio18 : Form
     {
-        private Producto[] productos = new Producto[100]; // Máximo 100 productos
+        private Producto[] productos = new Producto[100]; 
         private int contadorProductos = 0;
 
         public FrmEjercicio18()
@@ -24,7 +24,6 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
 
         private void FrmEjercicio18_Load_1(object sender, EventArgs e)
         {
-            // categorías en el ComboBox
             cmbCategoria.Items.Clear();
             cmbCategoria.Items.Add("Laptops");
             cmbCategoria.Items.Add("Monitores");
@@ -66,7 +65,7 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
         {
             try
             {
-                // VALIDAR CÓDIGO
+   
                 if (string.IsNullOrWhiteSpace(txtCodigo.Text))
                 {
                     MessageBox.Show("Ingrese el código del producto.",
@@ -74,8 +73,6 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
                     txtCodigo.Focus();
                     return;
                 }
-
-                // VALIDAR NOMBRE
                 if (string.IsNullOrWhiteSpace(txtNombre.Text))
                 {
                     MessageBox.Show("Ingrese el nombre del producto.",
@@ -84,7 +81,6 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
                     return;
                 }
 
-                // VALIDAR QUE NO SE EXCEDA EL LÍMITE
                 if (contadorProductos >= productos.Length)
                 {
                     MessageBox.Show("Ya no se pueden registrar más productos.",
@@ -92,7 +88,6 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
                     return;
                 }
 
-                // VALIDAR QUE EL CÓDIGO NO ESTÉ DUPLICADO
                 for (int i = 0; i < contadorProductos; i++)
                 {
                     if (productos[i].Codigo == txtCodigo.Text.Trim())
@@ -103,8 +98,6 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
                         return;
                     }
                 }
-
-                // CREAR EL PRODUCTO Y AGREGARLO AL ARREGLO
                 Producto nuevo = new Producto(
                     txtCodigo.Text.Trim(),
                     txtNombre.Text.Trim(),
@@ -116,18 +109,12 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
                 productos[contadorProductos] = nuevo;
                 contadorProductos++;
 
-                // AGREGAR AL DATAGRIDVIEW
                 dgvProductos.Rows.Add(nuevo.Codigo, nuevo.Nombre, nuevo.Categoria,
                                       nuevo.StockActual, nuevo.StockMinimo);
 
-                // ACTUALIZAR CÁLCULOS
                 ActualizarCalculos();
-
-                // MENSAJE DE ÉXITO
                 MessageBox.Show("¡Producto registrado correctamente!",
                     "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                // LIMPIAR CAMPOS
                 LimpiarCampos();
             }
             catch (Exception ex)
@@ -138,7 +125,7 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
         }
             private void ActualizarCalculos()
         {
-            // TOTAL DE PRODUCTOS
+
             txtTotal.Text = contadorProductos.ToString();
 
             if (contadorProductos == 0)
@@ -150,7 +137,7 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
                 return;
             }
 
-            // RECORRER EL ARREGLO CON ESTRUCTURAS REPETITIVAS
+
             int mayorStock = -1;
             int menorStock = int.MaxValue;
             string nombreMayor = "";
@@ -158,26 +145,25 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
             int productosBajoStock = 0;
             int productosSobreStock = 0;
 
-            // Limpiar el ListBox de alertas
             lstAlertas.Items.Clear();
 
             for (int i = 0; i < contadorProductos; i++)
             {
-                // Mayor stock
+
                 if (productos[i].StockActual > mayorStock)
                 {
                     mayorStock = productos[i].StockActual;
                     nombreMayor = productos[i].Codigo;
                 }
 
-                // Menor stock
+
                 if (productos[i].StockActual < menorStock)
                 {
                     menorStock = productos[i].StockActual;
                     nombreMenor = productos[i].Codigo;
                 }
 
-                // Productos bajo stock mínimo (ALERTA)
+
                 if (productos[i].EstaBajoStock())
                 {
                     productosBajoStock++;
@@ -188,12 +174,8 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
                     productosSobreStock++;
                 }
             }
-
-            // MOSTRAR MAYOR Y MENOR STOCK
             txtMayor.Text = $"{nombreMayor} ({mayorStock})";
             txtMenor.Text = $"{nombreMenor} ({menorStock})";
-
-            // CALCULAR PORCENTAJE SOBRE STOCK MÍNIMO
             int porcentaje = (int)((double)productosSobreStock / contadorProductos * 100);
             pbPorcentaje.Value = porcentaje;
         }

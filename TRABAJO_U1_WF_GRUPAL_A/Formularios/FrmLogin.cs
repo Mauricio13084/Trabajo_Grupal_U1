@@ -29,6 +29,7 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
                     MessageBox.Show("¡Bienvenido al Sistema!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     MDIPrincipal principal = new MDIPrincipal();
+                    principal.UsuarioLogueado = txtUsuario.Text;
                     principal.Show();
                     this.Hide();
                 }

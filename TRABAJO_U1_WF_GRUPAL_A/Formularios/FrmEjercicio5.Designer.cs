@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEjercicio5));
-            this.btnPiedra = new System.Windows.Forms.Button();
-            this.btnPapel = new System.Windows.Forms.Button();
-            this.btnTijera = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,46 +41,20 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.btnNuevoJuego = new System.Windows.Forms.Button();
-            this.picJugador = new System.Windows.Forms.PictureBox();
             this.picComputadora = new System.Windows.Forms.PictureBox();
+            this.picJugador = new System.Windows.Forms.PictureBox();
+            this.btnTijera = new System.Windows.Forms.Button();
+            this.btnPapel = new System.Windows.Forms.Button();
+            this.btnPiedra = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.picJugador)).BeginInit();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picComputadora)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picJugador)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnPiedra
-            // 
-            this.btnPiedra.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPiedra.BackgroundImage")));
-            this.btnPiedra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPiedra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPiedra.Location = new System.Drawing.Point(231, 138);
-            this.btnPiedra.Name = "btnPiedra";
-            this.btnPiedra.Size = new System.Drawing.Size(160, 140);
-            this.btnPiedra.TabIndex = 0;
-            this.btnPiedra.UseVisualStyleBackColor = true;
-            this.btnPiedra.Click += new System.EventHandler(this.BotonJugada_Click);
-            // 
-            // btnPapel
-            // 
-            this.btnPapel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPapel.BackgroundImage")));
-            this.btnPapel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPapel.Location = new System.Drawing.Point(433, 138);
-            this.btnPapel.Name = "btnPapel";
-            this.btnPapel.Size = new System.Drawing.Size(160, 140);
-            this.btnPapel.TabIndex = 1;
-            this.btnPapel.UseVisualStyleBackColor = true;
-            this.btnPapel.Click += new System.EventHandler(this.BotonJugada_Click);
-            // 
-            // btnTijera
-            // 
-            this.btnTijera.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTijera.BackgroundImage")));
-            this.btnTijera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTijera.Location = new System.Drawing.Point(637, 138);
-            this.btnTijera.Name = "btnTijera";
-            this.btnTijera.Size = new System.Drawing.Size(160, 140);
-            this.btnTijera.TabIndex = 2;
-            this.btnTijera.UseVisualStyleBackColor = true;
-            this.btnTijera.Click += new System.EventHandler(this.BotonJugada_Click);
             // 
             // label1
             // 
@@ -208,15 +179,6 @@
             this.btnNuevoJuego.UseVisualStyleBackColor = false;
             this.btnNuevoJuego.Click += new System.EventHandler(this.btnNuevoJuego_Click);
             // 
-            // picJugador
-            // 
-            this.picJugador.Location = new System.Drawing.Point(86, 360);
-            this.picJugador.Name = "picJugador";
-            this.picJugador.Size = new System.Drawing.Size(160, 140);
-            this.picJugador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picJugador.TabIndex = 17;
-            this.picJugador.TabStop = false;
-            // 
             // picComputadora
             // 
             this.picComputadora.Location = new System.Drawing.Point(776, 360);
@@ -226,23 +188,121 @@
             this.picComputadora.TabIndex = 18;
             this.picComputadora.TabStop = false;
             // 
+            // picJugador
+            // 
+            this.picJugador.Location = new System.Drawing.Point(86, 360);
+            this.picJugador.Name = "picJugador";
+            this.picJugador.Size = new System.Drawing.Size(160, 140);
+            this.picJugador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picJugador.TabIndex = 17;
+            this.picJugador.TabStop = false;
+            // 
+            // btnTijera
+            // 
+            this.btnTijera.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTijera.BackgroundImage")));
+            this.btnTijera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTijera.Location = new System.Drawing.Point(637, 138);
+            this.btnTijera.Name = "btnTijera";
+            this.btnTijera.Size = new System.Drawing.Size(160, 140);
+            this.btnTijera.TabIndex = 2;
+            this.btnTijera.UseVisualStyleBackColor = true;
+            this.btnTijera.Click += new System.EventHandler(this.BotonJugada_Click);
+            // 
+            // btnPapel
+            // 
+            this.btnPapel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPapel.BackgroundImage")));
+            this.btnPapel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPapel.Location = new System.Drawing.Point(433, 138);
+            this.btnPapel.Name = "btnPapel";
+            this.btnPapel.Size = new System.Drawing.Size(160, 140);
+            this.btnPapel.TabIndex = 1;
+            this.btnPapel.UseVisualStyleBackColor = true;
+            this.btnPapel.Click += new System.EventHandler(this.BotonJugada_Click);
+            // 
+            // btnPiedra
+            // 
+            this.btnPiedra.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPiedra.BackgroundImage")));
+            this.btnPiedra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPiedra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPiedra.Location = new System.Drawing.Point(231, 138);
+            this.btnPiedra.Name = "btnPiedra";
+            this.btnPiedra.Size = new System.Drawing.Size(160, 140);
+            this.btnPiedra.TabIndex = 0;
+            this.btnPiedra.UseVisualStyleBackColor = true;
+            this.btnPiedra.Click += new System.EventHandler(this.BotonJugada_Click);
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(349, 32);
+            this.label13.BackColor = System.Drawing.Color.SteelBlue;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.Control;
+            this.label13.Location = new System.Drawing.Point(68, 34);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(330, 37);
-            this.label13.TabIndex = 19;
-            this.label13.Text = "PIEDRA, PAPEL O TIJERA";
+            this.label13.Size = new System.Drawing.Size(134, 15);
+            this.label13.TabIndex = 40;
+            this.label13.Text = "PRIVADA DE TACNA";
             // 
-            // FrmEjercicio4
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.SteelBlue;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.Control;
+            this.label14.Location = new System.Drawing.Point(68, 18);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(99, 15);
+            this.label14.TabIndex = 39;
+            this.label14.Text = "UNIVERSIDAD";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(21, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(43, 54);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 38;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.SteelBlue;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.Control;
+            this.label15.Location = new System.Drawing.Point(346, 18);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(361, 31);
+            this.label15.TabIndex = 37;
+            this.label15.Text = "PIEDRA PAPEL O TIJERA";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.SteelBlue;
+            this.textBox1.Location = new System.Drawing.Point(0, 1);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(1050, 63);
+            this.textBox1.TabIndex = 36;
+            // 
+            // FrmEjercicio5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1037, 682);
             this.Controls.Add(this.label13);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.picComputadora);
             this.Controls.Add(this.picJugador);
             this.Controls.Add(this.btnNuevoJuego);
@@ -262,11 +322,12 @@
             this.Controls.Add(this.btnPiedra);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "FrmEjercicio4";
+            this.Name = "FrmEjercicio5";
             this.Text = "FrmEjercicio4";
             this.Load += new System.EventHandler(this.FrmEjercicio4_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picJugador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picComputadora)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picJugador)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,5 +353,9 @@
         private System.Windows.Forms.PictureBox picJugador;
         private System.Windows.Forms.PictureBox picComputadora;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

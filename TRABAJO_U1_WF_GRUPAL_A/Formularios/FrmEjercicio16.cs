@@ -67,52 +67,39 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
         {
             try
             {
-                // ===== VALIDACIÓN 1: DNI =====
                 if (string.IsNullOrWhiteSpace(mtxtDNI.Text) || mtxtDNI.Text.Replace(" ", "").Trim().Length != 8)
                 {
                     RegistrarError("DNI", "El DNI debe tener 8 dígitos.");
                     throw new Exception("El DNI debe tener exactamente 8 dígitos.");
                 }
-
-                // ===== VALIDACIÓN 2: NOMBRE =====
                 if (string.IsNullOrWhiteSpace(txtNombre.Text))
                 {
                     RegistrarError("Nombre", "El nombre no puede estar vacío.");
                     throw new Exception("El nombre no puede estar vacío.");
                 }
-
-                // ===== VALIDACIÓN 3: EDAD =====
                 if (nudEdad.Value <= 16)
                 {
                     RegistrarError("Edad", "La edad debe ser mayor a 16 años.");
                     throw new Exception("La edad debe ser mayor a 16 años.");
                 }
-
-                // ===== VALIDACIÓN 4: CARRERA =====
                 if (cmbCarrera.SelectedIndex == -1)
                 {
                     RegistrarError("Carrera", "Debe seleccionar una carrera.");
                     throw new Exception("Debe seleccionar una carrera.");
                 }
-
-                // ===== VALIDACIÓN 5: TURNO =====
                 if (!rbManana.Checked && !rbTarde.Checked && !rbNoche.Checked)
                 {
                     RegistrarError("Turno", "Debe seleccionar un turno.");
                     throw new Exception("Debe seleccionar un turno (Mañana, Tarde o Noche).");
                 }
-
-                // ===== VALIDACIÓN 6: CORREO =====
                 if (string.IsNullOrWhiteSpace(txtCorreo.Text) || !txtCorreo.Text.Contains("@"))
                 {
                     RegistrarError("Correo", "El correo debe contener '@' y no estar vacío.");
                     throw new Exception("El correo debe contener '@' y no estar vacío.");
                 }
 
-                // ===== SI TODO ESTÁ BIEN, REGISTRAMOS =====
                 string turno = rbManana.Checked ? "Mañana" : (rbTarde.Checked ? "Tarde" : "Noche");
 
-                // Creamos el objeto usando la clase externa Estudiante
                 Estudiante nuevo = new Estudiante(
                     mtxtDNI.Text.Replace(" ", "").Trim(),
                     txtNombre.Text.Trim(),
@@ -124,18 +111,13 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
 
                 estudiantes.Add(nuevo);
 
-                // Agregar al DataGridView
                 dgvMatriculados.Rows.Add(nuevo.DNI, nuevo.Nombre, nuevo.Edad,
                                          nuevo.Carrera, nuevo.Turno, nuevo.Correo);
-
-                // Actualizar cálculos
                 ActualizarCalculos();
 
-                // Mostrar mensaje de éxito
                 MessageBox.Show("¡Estudiante matriculado correctamente!",
                     "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Limpiar campos
                 LimpiarCampos();
             }
             catch (Exception ex)
@@ -144,7 +126,6 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        // ===== MÉTODO PARA REGISTRAR ERRORES EN EL LISTVIEW =====
         private void RegistrarError(string campo, string detalle)
         {
             ListViewItem item = new ListViewItem(DateTime.Now.ToString("HH:mm:ss"));
@@ -153,8 +134,6 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
             item.ForeColor = Color.Red;
             lvErrores.Items.Add(item);
         }
-
-        // ===== MÉTODO PARA ACTUALIZAR CÁLCULOS =====
         private void ActualizarCalculos()
         {
             if (estudiantes.Count == 0)
@@ -171,13 +150,9 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
                 txtEdadPromedio.Text = "0";
                 return;
             }
-
-            // Contadores
             int sistemas = 0, electronica = 0, civil = 0, ambiental = 0, industrial = 0, agroindustrial = 0;
             int manana = 0, tarde = 0, noche = 0;
             double sumaEdades = 0;
-
-            // Recorremos la lista de estudiantes
             foreach (var est in estudiantes)
             {
                 switch (est.Carrera)
@@ -196,8 +171,6 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
 
                 sumaEdades += est.Edad;
             }
-
-            // Asignar valores a los TextBox
             txtSistemas.Text = sistemas.ToString();
             txtElectronica.Text = electronica.ToString();
             txtCivil.Text = civil.ToString();
@@ -208,13 +181,10 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
             txtTurnoManana.Text = manana.ToString();
             txtTurnoTarde.Text = tarde.ToString();
             txtTurnoNoche.Text = noche.ToString();
-
-            // Edad promedio
             double promedio = sumaEdades / estudiantes.Count;
             txtEdadPromedio.Text = promedio.ToString("F2");
         }
-
-        // ===== MÉTODO PARA LIMPIAR CAMPOS =====
+    
         private void LimpiarCampos()
         {
             mtxtDNI.Clear();

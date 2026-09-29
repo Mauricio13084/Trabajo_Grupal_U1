@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEjercicio9));
             this.dgvEvaluaciones = new System.Windows.Forms.DataGridView();
             this.colEstudiante = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPractica = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,9 +44,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvaluaciones)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvEvaluaciones
@@ -60,12 +66,13 @@
             this.colExamen,
             this.colNotaFinal,
             this.colEstado});
-            this.dgvEvaluaciones.Location = new System.Drawing.Point(103, 263);
+            this.dgvEvaluaciones.Location = new System.Drawing.Point(59, 308);
+            this.dgvEvaluaciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvEvaluaciones.Name = "dgvEvaluaciones";
             this.dgvEvaluaciones.ReadOnly = true;
             this.dgvEvaluaciones.RowHeadersWidth = 51;
             this.dgvEvaluaciones.RowTemplate.Height = 24;
-            this.dgvEvaluaciones.Size = new System.Drawing.Size(1087, 226);
+            this.dgvEvaluaciones.Size = new System.Drawing.Size(815, 184);
             this.dgvEvaluaciones.TabIndex = 5;
             // 
             // colEstudiante
@@ -127,18 +134,21 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(179, 85);
+            this.groupBox1.Location = new System.Drawing.Point(116, 163);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(956, 156);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(717, 127);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Notas";
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(737, 105);
+            this.btnCalcular.Location = new System.Drawing.Point(553, 85);
+            this.btnCalcular.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(193, 35);
+            this.btnCalcular.Size = new System.Drawing.Size(145, 28);
             this.btnCalcular.TabIndex = 6;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
@@ -146,77 +156,139 @@
             // 
             // btnExamen
             // 
-            this.btnExamen.Location = new System.Drawing.Point(817, 48);
+            this.btnExamen.Location = new System.Drawing.Point(613, 39);
+            this.btnExamen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExamen.Name = "btnExamen";
-            this.btnExamen.Size = new System.Drawing.Size(123, 30);
+            this.btnExamen.Size = new System.Drawing.Size(93, 26);
             this.btnExamen.TabIndex = 5;
             // 
             // btnTrabajos
             // 
-            this.btnTrabajos.Location = new System.Drawing.Point(505, 46);
+            this.btnTrabajos.Location = new System.Drawing.Point(379, 37);
+            this.btnTrabajos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTrabajos.Name = "btnTrabajos";
-            this.btnTrabajos.Size = new System.Drawing.Size(122, 30);
+            this.btnTrabajos.Size = new System.Drawing.Size(92, 26);
             this.btnTrabajos.TabIndex = 4;
             // 
             // btnPractica
             // 
-            this.btnPractica.Location = new System.Drawing.Point(188, 46);
+            this.btnPractica.Location = new System.Drawing.Point(141, 37);
+            this.btnPractica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPractica.Name = "btnPractica";
-            this.btnPractica.Size = new System.Drawing.Size(123, 30);
+            this.btnPractica.Size = new System.Drawing.Size(93, 26);
             this.btnPractica.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(652, 51);
+            this.label4.Location = new System.Drawing.Point(489, 41);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(149, 25);
+            this.label4.Size = new System.Drawing.Size(117, 20);
             this.label4.TabIndex = 2;
             this.label4.Text = "Examen (40%):";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(342, 51);
+            this.label3.Location = new System.Drawing.Point(256, 41);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(148, 25);
+            this.label3.Size = new System.Drawing.Size(116, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "Trabajos (30%)";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 51);
+            this.label2.Location = new System.Drawing.Point(18, 41);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 25);
+            this.label2.Size = new System.Drawing.Size(116, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Practica (30%):";
             // 
-            // label1
+            // label13
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Purple;
-            this.label1.Location = new System.Drawing.Point(454, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(419, 36);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Calculo de Calificacion Final";
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.SteelBlue;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.Control;
+            this.label13.Location = new System.Drawing.Point(65, 31);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(134, 15);
+            this.label13.TabIndex = 40;
+            this.label13.Text = "PRIVADA DE TACNA";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.SteelBlue;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.Control;
+            this.label14.Location = new System.Drawing.Point(65, 15);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(99, 15);
+            this.label14.TabIndex = 39;
+            this.label14.Text = "UNIVERSIDAD";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(18, 1);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(43, 54);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 38;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.SteelBlue;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.Control;
+            this.label15.Location = new System.Drawing.Point(287, 15);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(502, 31);
+            this.label15.TabIndex = 37;
+            this.label15.Text = "CALCULO DE CALIFICACION FINAL";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.SteelBlue;
+            this.textBox1.Location = new System.Drawing.Point(-3, -2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(959, 63);
+            this.textBox1.TabIndex = 36;
             // 
             // FrmEjercicio9
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1265, 643);
+            this.ClientSize = new System.Drawing.Size(949, 522);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dgvEvaluaciones);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmEjercicio9";
             this.Text = "FrmEjercicio9";
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvaluaciones)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,6 +311,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

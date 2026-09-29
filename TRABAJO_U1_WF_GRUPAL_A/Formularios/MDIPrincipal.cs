@@ -13,7 +13,10 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
     public partial class MDIPrincipal : Form
     {
         private int childFormNumber = 0;
-
+        public string UsuarioLogueado { get; set; } = "admin";
+        private Dictionary<string, int> conteoEjercicios = new Dictionary<string, int>();
+        private int totalAperturas = 0;
+        private Timer timerReloj;
         public MDIPrincipal()
         {
             InitializeComponent();
@@ -111,10 +114,62 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
             fila.SubItems.Add(nombreEjercicio);
 
             lstHistorial.Items.Add(fila);
+
+            totalAperturas++;
+            if (conteoEjercicios.ContainsKey(nombreEjercicio))
+            {
+                conteoEjercicios[nombreEjercicio]++;
+            }
+            else
+            {
+                conteoEjercicios[nombreEjercicio] = 1;
+            }
+
+            ActualizarEstadisticas();
+        }
+
+        private void ActualizarEstadisticas()
+        {
+            // Total de Aperturas (label8)
+            label8.Text = totalAperturas.ToString();
+
+            // Ejercicio más Abierto (label7)
+            if (conteoEjercicios.Count > 0)
+            {
+                var ejercicioTop = conteoEjercicios.Aggregate((l, r) => l.Value > r.Value ? l : r);
+                label7.Text = $"{ejercicioTop.Key} ({ejercicioTop.Value} veces)";
+            }
+            else
+            {
+                label7.Text = "Ninguno";
+            }
         }
         private void MDIPrincipal_Load(object sender, EventArgs e)
         {
+            label2.Text = UsuarioLogueado;
+
+            ConfigurarReloj();
             this.WindowState = FormWindowState.Maximized;
+        }
+        private void ConfigurarReloj()
+        {
+            timerReloj = new Timer();
+            timerReloj.Interval = 1000; // Cada 1 segundo
+            timerReloj.Tick += TimerReloj_Tick;
+            timerReloj.Start();
+        }
+
+        private void TimerReloj_Tick(object sender, EventArgs e)
+        {
+            string horaActual = DateTime.Now.ToString("HH:mm:ss");
+            string fechaHoraCompleta = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+
+            label4.Text = horaActual;
+
+            if (statusStrip != null && statusStrip.Items.Count > 0)
+            {
+                statusStrip.Items[0].Text = $"Usuario: {UsuarioLogueado}  |  Fecha y Hora: {fechaHoraCompleta}";
+            }
         }
 
         private void ejercicio1ConsumoDeAguaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -229,6 +284,11 @@ namespace TRABAJO_U1_WF_GRUPAL_A.Formularios
         {
             FrmEjercicio20 frm = new FrmEjercicio20();
             AbrirEjercicioHijo(frm, "Ejercicio 20");
+        }
+
+        private void lstHistorial_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

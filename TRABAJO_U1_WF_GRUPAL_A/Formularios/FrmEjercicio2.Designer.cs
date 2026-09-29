@@ -99,6 +99,8 @@
             // btnRegistrar
             // 
             this.btnRegistrar.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnRegistrar.FlatAppearance.BorderSize = 0;
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRegistrar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnRegistrar.Location = new System.Drawing.Point(68, 239);
             this.btnRegistrar.Name = "btnRegistrar";
@@ -242,6 +244,8 @@
             // btnLimpiar
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.Red;
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLimpiar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLimpiar.Location = new System.Drawing.Point(606, 342);
             this.btnLimpiar.Name = "btnLimpiar";
@@ -254,6 +258,8 @@
             // btnCalcular
             // 
             this.btnCalcular.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnCalcular.FlatAppearance.BorderSize = 0;
+            this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCalcular.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCalcular.Location = new System.Drawing.Point(507, 342);
             this.btnCalcular.Name = "btnCalcular";
@@ -305,7 +311,7 @@
             this.label13.BackColor = System.Drawing.Color.SteelBlue;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.Control;
-            this.label13.Location = new System.Drawing.Point(66, 25);
+            this.label13.Location = new System.Drawing.Point(67, 31);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(134, 15);
@@ -318,7 +324,7 @@
             this.label14.BackColor = System.Drawing.Color.SteelBlue;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.Control;
-            this.label14.Location = new System.Drawing.Point(66, 9);
+            this.label14.Location = new System.Drawing.Point(67, 15);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(99, 15);
@@ -329,7 +335,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(19, -5);
+            this.pictureBox2.Location = new System.Drawing.Point(20, 1);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(43, 54);
@@ -343,17 +349,17 @@
             this.label15.BackColor = System.Drawing.Color.SteelBlue;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.Control;
-            this.label15.Location = new System.Drawing.Point(344, 9);
+            this.label15.Location = new System.Drawing.Point(345, 15);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(315, 31);
+            this.label15.Size = new System.Drawing.Size(446, 31);
             this.label15.TabIndex = 32;
-            this.label15.Text = "JUEGO: ALTO O SIGO";
+            this.label15.Text = "CONSUMO MENSUAL DE AGUA";
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.SteelBlue;
-            this.textBox1.Location = new System.Drawing.Point(-2, -8);
+            this.textBox1.Location = new System.Drawing.Point(-1, -2);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -364,6 +370,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1045, 528);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
